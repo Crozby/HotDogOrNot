@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.querySelector("#link").oncontextmenu = () => {
         document.querySelector("#link").value = '';
+        document.querySelector("#btn_send").disabled = true;
         event.preventDefault();
     };
 
