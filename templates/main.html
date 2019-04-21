@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="static/main.css">
+    <script src="static/common.js"></script>
+    <head>
+        <title>Books</title>
+    </head>
+    <body>
+        <div class="container-fluid box">
+            <div class="row align-items-center">
+                <div class="col-sm"></div>
+                <div class="col-sm align-items-center text-center">
+                    <div id="warning" class="alert alert-danger" role="alert" style="display: none">
+                        The link is not valid
+                    </div>
+                    <label for="link">Paste the link</label>
+                    <input id="link" placeholder="your link" class="form-control"/>
+                    <button id="btn_send" class="btn btn-sm btn-primary btn-block btn-mrg" disabled>Check</button>
+                    <p id="answer" style="margin-top: 50px;"></p>
+                    <p align="center">
+                        <img alt="your picture" id="image" src="" style="width: 400px; margin-top: 20px; display: none">
+                    </p>
+                </div>
+                <div class="col-sm"></div>
+            </div>
+        </div>
+    </body>
+</html>
