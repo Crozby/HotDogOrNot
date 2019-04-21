@@ -1,0 +1,1 @@
+web: gunicorn busornotapp.wsgi --log-file -
