@@ -1,1 +1,1 @@
-web: gunicorn busornot:app --log-file -
+web: gunicorn hotdogapp:app --log-file -
