@@ -10,6 +10,13 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     document.querySelector("#btn_send").onclick = () => {
+        const path = document.querySelector("#link").value;
+        if (path.substring(path.length - 4, path.length) !== ".jpg") {
+            document.querySelector("#only_jpg").style.display = "block";
+            return;
+        } else {
+            document.querySelector("#only_jpg").style.display = "none";
+        }
         const request = new XMLHttpRequest();
         request.open("POST", "/get_answer");
         request.onload = () => {
@@ -26,8 +33,8 @@ document.addEventListener("DOMContentLoaded", () => {
         };
 
         const data = new FormData();
-        data.append("path", document.querySelector("#link").value);
-        data.append("token", "12w1y2h3u12heu289HU2dsa&8789sak2ed")
+        data.append("path", path);
+        data.append("token", "12w1y2h3u12heu289HU2dsa&8789sak2ed");
         request.send(data);
     }
 });
